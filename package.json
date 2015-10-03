@@ -1,0 +1,25 @@
+{
+    "name": "grunt-env-config",
+    "version": "0.1.0",
+    "description": "require template and env template helpers for env based grunt config",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/0of/grunt-env-config.git"
+    },
+    "files": [
+        "lib",
+        "index.js"
+    ],
+    "keywords": [
+        "grunt",
+        "env",
+        "envbuild"
+    ],
+    "author": "0of",
+    "license": "MIT",
+    "homepage": "https://github.com/0of/grunt-env-config",
+    "devDependencies": {
+        "eslint": "latest",
+        "grunt": "0.4.5"
+    }
+}
