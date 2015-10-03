@@ -1,0 +1,6 @@
+node_modules/
+typings/
+dist/
+tmp/
+jsconfig.json
+.DS_Store
