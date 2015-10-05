@@ -1,5 +1,4 @@
-var fs = require('fs'),
-    path = require('path'),
+var path = require('path'),
     assert = require('assert');
 
 var enableEnvConfig = require('../index');
@@ -40,7 +39,9 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test', ['templateRequire', 'envTemplateHelper', 'throughTemplateHelper']);
 
-    function envTest() {
+    grunt.registerTask('default', 'test');
+
+    function envTest () {
         var simpleObj = JSON.stringify(require(simpleObjPath));
         var opts;
 
@@ -57,5 +58,5 @@ module.exports = function (grunt) {
     }
 
     enableEnvConfig(grunt);
-}
+};
 

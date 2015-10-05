@@ -10,6 +10,10 @@
         "lib",
         "index.js"
     ],
+    "scripts": {
+        "test": "grunt test"
+    },
+    "main": "./index.js",
     "keywords": [
         "grunt",
         "env",
@@ -20,6 +24,7 @@
     "homepage": "https://github.com/0of/grunt-env-config",
     "devDependencies": {
         "eslint": "latest",
-        "grunt": "0.4.5"
+        "grunt": "0.4.5",
+        "grunt-eslint": "^17.1.0"
     }
 }
