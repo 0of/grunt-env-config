@@ -58,7 +58,7 @@ module.exports = function (grunt) {
     grunt.registerTask('conditionalTemplateRequire', 'should conditionally require successfully', function () {
         var opts,
             simpleObj = require(simpleObjPath);
-        
+
         process.env.cond = 'require-simple';
         try {
             opts = this.options();

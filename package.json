@@ -11,7 +11,7 @@
         "index.js"
     ],
     "scripts": {
-        "test": "grunt test"
+        "test": "grunt test --verbose"
     },
     "main": "./index.js",
     "keywords": [
