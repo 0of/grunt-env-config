@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         eslint: {
             target: {
-                src: ['index.js', 'test/*.js']
+                src: ['index.js', 'test/*.js', 'example/*.js']
             }
         },
         testGruntfile: {
