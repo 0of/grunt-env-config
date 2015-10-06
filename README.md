@@ -1,5 +1,12 @@
 # grunt-env-config
+[![Build status](https://ci.appveyor.com/api/projects/status/nd8r1uvjhbtj7746?svg=true)](https://ci.appveyor.com/project/0of/grunt-env-config)
+
 require template and env template helpers for env based grunt config
+
+# Enabling Env Config
+```javascript
+  require('grunt-env-config')(grunt);
+```
 
 # Template Usage Guidelines
 ## $require
