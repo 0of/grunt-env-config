@@ -3,9 +3,11 @@
 
 require template and env template helpers for env based grunt config
 
+```grunt >= 0.4.5```
+
 # Enabling Env Config
 ```javascript
-  require('grunt-env-config')(grunt);
+require('grunt-env-config')(grunt);
 ```
 
 # Template Usage Guidelines
