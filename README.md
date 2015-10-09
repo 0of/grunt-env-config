@@ -1,9 +1,15 @@
 # grunt-env-config
+[![npm version](https://badge.fury.io/js/grunt-env-config.svg)](https://badge.fury.io/js/grunt-env-config)
 [![Build status](https://ci.appveyor.com/api/projects/status/nd8r1uvjhbtj7746?svg=true)](https://ci.appveyor.com/project/0of/grunt-env-config)
 
 require template and env template helpers for env based grunt config
 
 ```grunt >= 0.4.5```
+
+# Installation
+```shell
+npm install grunt-env-config
+```
 
 # Enabling Env Config
 ```javascript
