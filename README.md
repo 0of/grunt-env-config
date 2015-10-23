@@ -4,7 +4,7 @@
 
 require template and env template helpers for env based grunt config
 
-```grunt >= 0.4.5```
+```grunt >= 0.4.0```
 
 # Installation
 ```shell
