@@ -41,21 +41,21 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('templateRequire', 'should require successfully', function () {
+    grunt.registerTask('templateRequire', it('should require successfully', function () {
         var opts = this.options(),
             simpleObj = require(simpleObjPath);
 
         assert.deepEqual(simpleObj, opts.a);
-    });
+    }));
 
-    grunt.registerTask('nestingTemplateRequire', 'should nesting require successfully', function () {
+    grunt.registerTask('nestingTemplateRequire', it ('should nesting require successfully', function () {
         var opts = this.options(),
             simpleObj = require(simpleObjPath);
 
         assert.deepEqual(simpleObj, opts.a.nesting);
-    });
+    }));
 
-    grunt.registerTask('conditionalTemplateRequire', 'should conditionally require successfully', function () {
+    grunt.registerTask('conditionalTemplateRequire', it ('should conditionally require successfully', function () {
         var opts,
             simpleObj = require(simpleObjPath);
 
@@ -69,11 +69,11 @@ module.exports = function (grunt) {
 
         assert.deepEqual(simpleObj, opts.a);
         delete process.env.cond;
-    });
+    }));
 
-    grunt.registerTask('envTemplateHelper', 'should access the env variable successfully', envTest);
+    grunt.registerTask('envTemplateHelper', it ('should access the env variable successfully', envTest));
 
-    grunt.registerTask('throughTemplateHelper', 'should access the env variable successfully', envTest);
+    grunt.registerTask('throughTemplateHelper', it ('should access the env variable successfully', envTest));
 
     grunt.registerTask('test', ['templateRequire',
                                 'envTemplateHelper',
@@ -97,6 +97,18 @@ module.exports = function (grunt) {
 
         assert.equal(simpleObj, opts.a);
         delete process.env.a;
+    }
+
+    function it (shouldWhat, assert) {
+        return function () {
+            grunt.log.writeln('>>> it ' + shouldWhat);
+            try {
+                assert.apply(this, arguments);
+                grunt.log.ok('OK');
+            } catch (e) {
+                grunt.log.error('Failed:' + e);
+            }
+        };
     }
 
     enableEnvConfig(grunt);

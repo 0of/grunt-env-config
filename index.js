@@ -85,7 +85,7 @@ function enableEnvConfig (grunt, opts) {
         var matched = prop.match(regExpr);
         if (matched) {
             var path = grunt.config.get(matched[1]);
-            grunt.log.writeln('$require:' + path);
+            grunt.verbose.writeln('$require:' + path);
             return require(path);
         }
     }
